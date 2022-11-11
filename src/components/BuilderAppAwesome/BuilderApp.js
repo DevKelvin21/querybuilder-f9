@@ -1,12 +1,18 @@
 import React, {useCallback, useState} from 'react';
 import { Query, Builder, Utils as QbUtils } from 'react-awesome-query-builder';
-import { config } from './config';
+import { configuration } from './config';
 import 'react-awesome-query-builder/lib/css/styles.css';
 import 'react-awesome-query-builder/lib/css/compact_styles.css';
 
 const queryValue = {"id": QbUtils.uuid(), "type": "group"};
 
-const BuilderApp = () => {
+const BuilderAppAwesome = ({fields}) => {
+
+    const config = {
+        ...configuration,
+        fields: fields
+    }
+
     const [state, setState] = useState({
         tree: QbUtils.checkTree(QbUtils.loadTree(queryValue), config),
         config: config,
@@ -37,4 +43,4 @@ const BuilderApp = () => {
 
 }
 
-export default BuilderApp;
+export default BuilderAppAwesome;

@@ -1,13 +1,11 @@
 import React from 'react';
-import BuilderApp from './components/BuilderApp/BuilderApp';
-import './App.css';
+import Home from './pages/Home/Home';
+
 
 function App() {
   return (
     <div className="App">
-      <React.StrictMode>
-        <BuilderApp />
-      </React.StrictMode>
+      <Home />
     </div>
   );
 }

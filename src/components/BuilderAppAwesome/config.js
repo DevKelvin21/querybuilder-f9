@@ -2,7 +2,7 @@ import BootstrapConfig from 'react-awesome-query-builder/lib/config/bootstrap';
 
 const initialConfig = BootstrapConfig;
 
-export const config = {
+export const configuration = {
     ...initialConfig,
     fields: {
         qty:{
