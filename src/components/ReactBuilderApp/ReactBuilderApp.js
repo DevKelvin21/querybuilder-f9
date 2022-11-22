@@ -3,17 +3,22 @@ import {
   bootstrapControlClassnames,
   bootstrapControlElements,
 } from "@react-querybuilder/bootstrap";
-import { QueryBuilder } from "react-querybuilder";
-
+import { QueryBuilderBootstrap } from '@react-querybuilder/bootstrap';
+import { QueryBuilder, formatQuery } from "react-querybuilder";
+import './ReactBuilderApp.scss'
 
 
 const ReactBuilderApp = ({fields})=> {
   return (
-    <QueryBuilder
-        fields={fields}
-        controlElements={bootstrapControlElements}
-        controlClassnames={bootstrapControlClassnames}
-    />
+      <div className="row">
+        <QueryBuilderBootstrap>
+          <QueryBuilder
+              fields={fields}
+              controlElements={bootstrapControlElements}
+              controlClassnames={bootstrapControlClassnames}
+          />
+        </QueryBuilderBootstrap>
+      </div>
   );
 }
 
